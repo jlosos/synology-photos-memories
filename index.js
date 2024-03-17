@@ -185,7 +185,7 @@ async function main() {
   }
 
   const ipAddressWithoutPort = ip.split(':')[0];
-  const mailHtml = `${photoUrls.join('<br>')}<br><a href="//${ipAddressWithoutPort}:${hostPort}" target="_blank">View all on web</a>`;
+  const mailHtml = `<a href="http://${ipAddressWithoutPort}:${hostPort}" target="_blank">View all on web</a><br>${photoUrls.join('<br>')}`;
   
   const mailOptions = {
     from: sendEmail,
